@@ -1,14 +1,10 @@
-// type of function performing task
+let a = "red";
+let b = "blue";
 
-function greet(name, lastName) {
-  console.log("hello " + name + " " + lastName);
-}
+let color = b;
 
-// calculating value
-function square(number) {
-  return number + number;
-}
+b = a;
+a = color;
 
-console.log(square(5));
-
-
+console.log(a);
+console.log(b);
