@@ -1,4 +1,8 @@
-// for loop
-for (let i = 1; i <= 5; i++) {
-  if (i % 2 !== 0) console.log(i);
+let person = {
+  name: "juhee",
+  age: 25,
+};
+
+for (let key in person) {
+  console.log(key, ":" , person[key]);
 }
