@@ -1,14 +1,14 @@
-let person = {
-  name: "juhee",
-  age: 25,
-};
+// break and continue
 
-for (let key in person) {
-  console.log(key, ":", person[key]);
-}
+let i = 0;
 
-let color = ["red", "blue"];
+while (i <= 10) {
+  if (i === 5) break;
 
-for (let index in color) {
-  console.log(index, color[index]);
+  if (i % 2 === 0) {
+    i++;
+    continue;
+  }
+  console.log(i);
+  i++;
 }
