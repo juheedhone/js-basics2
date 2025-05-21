@@ -1,47 +1,20 @@
-// Object Oriented Programming
-
-// const circle = {
-//   radius: 1,
-//   location: {
-//     x: 1,
-//     y: 2,
-//   },
-//   isVisible: true,
-//   draw: function () {
-//     console.log("draw");
-//   },
-// };
-
-// circle.draw(); //method
-
-// factory function(camelNotation)
-
-// function createCircle(name, age, location) {
-//   return {
-//     name,
-//     age,
-//     location,
-//     draw() {
-//       console.log("draw");
-//     },
-//   };
-// }
-
-// const circle = createCircle("juhee", 25, "nagpur");
-// console.log(circle);
-
-// constructor function(PascalNotation)
-
-function Circle(name, age, location) {
-  this.name = name;
-  this.age = age;
-  this.location = location;
-  this.draw = function () {
+const circle = {
+  radius: 1,
+  draw() {
     console.log("draw");
-  };
+  },
+};
+
+for (let key in circle) {
+  console.log(key, circle[key]);
 }
 
-const circle1 = new Circle("juhee", 25, "nagpur");
-console.log(circle1);
+for (let key of Object.keys(circle)) {
+  //   console.log(key, circle[key]);
+}
 
+for (let entry of Object.entries(circle)) {
+  //   console.log(entry);
+}
 
+if ("color" in circle) console.log("yes");
