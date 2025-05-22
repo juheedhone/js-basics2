@@ -1,16 +1,5 @@
-const courses = [
-  { id: 1, name: "Node.js" },
-  { id: 2, name: "javascript" },
-];
-courses.sort();
+const numbers = [1, 2, 3, "a", 4];
 
-const sorting = courses.sort(function (a, b) {
-  const nameA = a.name.toLowerCase();
-  const nameB = b.name.toLowerCase();
+const items = numbers.filter((v) => v >= 0).map((n) => ({ value: n }));
 
-  if (nameA < nameB) return -1;
-  if (nameA > nameB) return 1;
-  return 0;
-});
-
-console.log(sorting);
+console.log(items);
