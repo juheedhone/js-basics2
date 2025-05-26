@@ -1,20 +1,23 @@
-// function sum() {
-//   let total = 0;
-//   for (let element of arguments) total = element + total;
-//   return total;
-// }
-// console.log(sum(1, 2, 3, 4, 5, 6));
+const person = {
+  firstName: "juhee",
+  lastName: "dhone",
 
-// function sum(...args) {
-//   let total = args.reduce((a, b) => a + b);
-//   return total;
-// }
+  set fullName(value) {
+    if (typeof value !== "string") throw new Error("not a string ");
 
-// console.log(sum(1, 2, 3, 4, 5, 6, 7));
+    const parts = value.split(" ");
+    if (parts.length !== 2) throw new Error("enter first and last name");
 
-function sum(discount, ...prices) {
-  const total = prices.reduce((a, b) => a + b);
-  return total * (1 - discount);
+    this.firstName = parts[0];
+    this.lastName = parts[1];
+  },
+};
+
+try {
+  person.fullName = null;
+} 
+catch (e) {
+  alert(e);
 }
 
-console.log(sum(0.1, 20, 30));
+console.log(person);
